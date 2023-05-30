@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+/*  css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style: none;
+}
+
+:root {
+  --primary-color: #d39c1a;
+}
+
+/*  main css start */
+
+header {
+  min-height: 10vh;
+  height: 100%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h2 {
+  text-transform: uppercase;
+}
+.main {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-div {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.9rem;
+  max-width: 40vh;
+  border-radius: 20px;
+}
+
+.calculator-div .display {
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 2.1rem;
+  font-weight: 400;
+  text-align: end;
+  overflow-wrap: break-word;
+  margin: 0.8rem 0;
+  min-height: 80px;
+  height: 100%;
+  padding: 0 5px;
+}
+.calculator-div .row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.calculator-div .row button {
+  font-size: 1.5rem;
+  padding: 7px 10px;
+  width: 50px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator-div .row button {
+  width: 70px;
+}
+.calculator-div .row button[data-type="op"] {
+  background: var(--primary-color);
+  color: white;
+  width: 70px;
+}
+
+.calculator-div .row button[data-type="clear"] {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.calculator-div .row button[data-type="Allclear"] {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.calculator-div .row button[data-type="result"] {
+  background: rgb(0 191 0 / 79%);
+  color: white;
+}
+
+.calculator-div .row:last-child button:nth-child(1) {
+  width: calc(100% - 120px);
+}
+
+footer {
+  height: 10vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.5)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer a {
+  color: black;
+}

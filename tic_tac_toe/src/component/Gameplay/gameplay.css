@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style: none;
+}
+
+/*  main css start */
+.main-gameplay {
+  padding: 1rem 3rem;
+  background: linear-gradient(to right, #000000b3, #000000dd) , url('../../assets/bg2.jpg') no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+  scrollbar-width: 0;
+}
+.main-gameplay h1 {
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+td {
+  border: 2px solid #ffffff;
+  color: #fff;
+  height: 100px;
+  width: 100px;
+  font-size: 70px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  /* margin: 0 auto; */
+  /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px; */
+}
+
+table tr:first-child td {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child {
+  border-left: 0;
+}
+table tr td:last-child {
+  border-right: 0;
+}
+.endgame {
+  width:0;
+  height: 0;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  transform: scale(0);
+}
+.show {
+    width: 300px;
+    height: auto;
+  transform: scale(1);
+}
+
+.endgame .innerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 2rem;
+  padding: 1.2rem 0;
+  color: white;
+}
+
+img {
+  border-radius: 10px;
+}
+.btn {
+  padding: 8px 15px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+#replay {
+    
+  background:#0dcaf0;
+  color: white;
+}
+#home {
+    background-color: #dc3545;
+    color: white;
+    width: 200px;
+    text-decoration: none;
+}
+.gif {
+  width: 220px;
+  margin: 0 auto;
+}
+
+/*  utility classes */
+.d-flex {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+
+/*  breakpoints */
+@media screen and (max-width: 800px) {
+    .d-flex {
+        flex-direction: column;
+        width: 50vw;
+        margin: 0 auto;
+    }
+    .main-gameplay h1 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .d-flex {
+        flex-direction: column;
+        width: calc(100% - 2rem );
+        margin: 0 auto;
+    }
+    .main-gameplay {
+        padding: 1rem;
+    }
+     
+}
