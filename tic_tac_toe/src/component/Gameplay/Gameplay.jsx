@@ -227,7 +227,7 @@ function minimax(newBoard, player) {
     <div className="endgame show">
         <div className='innerDiv'>
         <div className="text">You lose</div>
-        <img className="gif" src={lose} alt=""/>
+        <img className="gif" src="" alt="gif"/>
         <button id="replay" className='btn' onClick={startGame} >Replay</button>
         <Link to="/" id="home" className='btn' >Go to Home</Link>
        
