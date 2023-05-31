@@ -57,7 +57,7 @@ function turnClick(square) {
 		if (!checkWin(origBoard, huPlayer) && !checkTie()) {
 			setTimeout(() => {
 				turn(bestSpot(), aiPlayer)
-			}, 100);
+			}, 10);
 			};
 	}
 }

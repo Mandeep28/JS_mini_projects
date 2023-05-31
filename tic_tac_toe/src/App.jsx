@@ -13,7 +13,8 @@ function App() {
         <Route path="/hardgame" element={<Gameplay gameMode="hard" />} />
         <Route path="/" element={<Home />} />\
       </Routes>
-    </>
+    </> 
+    
   );
 }
 
