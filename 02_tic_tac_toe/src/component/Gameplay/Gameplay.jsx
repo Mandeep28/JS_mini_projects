@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
 import './gameplay.css'
-import lose from '../../assets/lose.gif'
-import win from '../../assets/win.gif'
-import draw from '../../assets/draw.gif'
 import { Link } from 'react-router-dom'
 
 const Gameplay = ({gameMode}) => {
@@ -96,10 +93,10 @@ function gameOver(gameWon) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
 	if(gameWon.player === huPlayer) {
-		declareWinner("You Win!", win)
+		declareWinner("You Win!", "win")
 	  }
 	  else {
-		declareWinner("You Lose!", lose)
+		declareWinner("You Lose!", "lose")
 	  }
     result = true;
 }
@@ -107,7 +104,7 @@ function gameOver(gameWon) {
 function declareWinner(who , gif) {
 	document.querySelector(".endgame").classList.add("show");
 	document.querySelector(".endgame .text").innerText = who;
-	document.querySelector(".gif").src = gif;
+	document.querySelector(".gif").src = `./images/${gif}.gif`;
   }
 function emptySquares() {
 	return origBoard.filter(s => typeof s == 'number');
@@ -134,7 +131,7 @@ function checkTie() {
 			cells[i].style.backgroundColor = "green";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner("Tie Game!" , draw);
+		declareWinner("Tie Game!" , "draw");
 		return true;
 	}
 	return false;

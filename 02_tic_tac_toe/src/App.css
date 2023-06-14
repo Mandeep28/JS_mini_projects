@@ -16,7 +16,7 @@ li {
   min-height: 100vh;
   max-width: 100vw;
   height: 100vh;
-  background: linear-gradient(to right, #0000003f, #000000) , url('./assets/bg1.jpg') no-repeat center center/cover;
+  background: linear-gradient(to right, #0000003f, #000000) , url('./images/bg1.jpg') no-repeat center center/cover;
   color: white;
   display: flex;
   align-items: start;
